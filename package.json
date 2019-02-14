@@ -1,0 +1,10 @@
+{
+  "name": "fullspeed",
+  "version": "1.0.0",
+  "scripts": {
+    "prod": "aws s3 cp ./dist s3://fullspeeddating --recursive --profile cryptizens",
+    "postprod": "aws cloudfront create-invalidation --distribution-id E15LXNZQ7JL87C --paths '/*' --profile cryptizens"
+  },
+  "author": "thomasvds",
+  "license": "ISC"
+}

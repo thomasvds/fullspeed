@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="author" content="FullSpeedDating" />
+	<title>FullSpeed Dating</title>
+	<meta name="description" content="Run in Brussels with inspirational people" />
+	<link rel="shortcut icon" type="image/ico" href="./images/favicon.png"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://unpkg.com/vue@2.5.22/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/vue-typer/dist/vue-typer.min.js"></script>
+	<style>
+		@font-face {
+			font-family: Camber;
+			src: url("./fonts/camber-sb.ttf")
+		}
+		@font-face {
+			font-family: AktivGrotesk;
+			src: url("./fonts/aktivgrotesk-rg.ttf")
+		}
+		body {
+			font-family: 'AktivGrotesk';
+			min-height: 100vh;
+			padding-top: 50px;
+			text-align: center;
+			background-color: #f7f7f8;
+			color: white;
+		}
+		footer {
+			padding-bottom: 10px;
+		}
+		@media only screen and (min-width: 600px) {
+			footer {
+				margin-top: 50px;
+			}
+		}
+		h1 {
+			font-family: 'Camber';
+		}
+		.bg {
+			background-image: linear-gradient(160deg,rgba(1,1,1, 0.1),rgba(0,0,0, 1)),url('./images/background.jpg');
+			height: 100%;
+			margin-right: 20px;
+			padding-left: 20px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.title {
+			padding-top: 3em;
+			margin-bottom: 40px;
+		}
+		.title__main {
+			font-size: 6rem !important;
+		}
+		@media only screen and (max-width: 600px) {
+			.title__main {
+				font-size: 3rem !important;
+			}
+		}
+		.description {
+			max-width: 650px;
+			margin: auto;
+			margin-bottom: 30px;
+		}
+		.button {
+			margin-bottom: 75px;
+			border: 2px solid white;
+			border-radius: 4px;
+			color: white;
+			padding: 10px 25px 10px 25px;
+			text-transform: uppercase;
+			font-size: 20px;
+			font-family: 'Camber';
+			background-color: transparent;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: black;
+		}
+		.event {
+			text-align: center;
+			margin: auto;
+			width: 260px;
+			margin-bottom: 30px;
+		}
+		.location {
+			text-transform: uppercase;
+			font-size: 20px;
+			font-family: 'Camber';
+		}
+		.date {
+			position: relative;
+			margin-bottom: 0;
+		}
+		.date::before {
+	    content: url('./images/leaves.svg');
+	    position: absolute;
+	    top: 0;
+			left: 0;
+		}
+		.date::after {
+			right: 0;
+    	transform: scaleX(-1);
+			content: url('./images/leaves.svg');
+	    position: absolute;
+	    top: 0;
+		}
+		.vue-typer {
+			min-height: 144px;
+			font-family: 'Camber';
+			font-size: 6rem !important;
+		}
+		@media only screen and (max-width: 600px) {
+			.vue-typer {
+				font-size: 3rem !important;
+			}
+		}
+		.vue-typer .custom.char.typed {
+		  color: white;
+		}
+		.vue-typer .custom.caret {
+		  visibility: hidden;
+		}
+	</style>
+</head>
+
+<body class="bg">
+	<div class="container" id="app">
+		<div class="row justify-content-center">
+			<div class="col col-auto">
+				<div class="title">
+					<h1 class="title__main">Run with other</h1>
+					<vue-typer
+					  :text='["entrepreneurs","changemakers","athletic friends","creatives","investors","founders","techies"]'
+					  :repeat='Infinity'
+					  :shuffle='false'
+					  initial-action='typing'
+					  :pre-type-delay='70'
+					  :type-delay='70'
+					  :pre-erase-delay='1000'
+					  :erase-delay='150'
+					  erase-style='backspace'
+					  :erase-on-complete='false'
+					  caret-animation='phase'
+					></vue-typer>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col">
+				<p class="description">FullSpeed Dating gives a whole new meaning to the concept of speed-dating. Join the community and meet inspirational people while jogging around Brussels' most scenic courses at dawn.</p>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col">
+				<a href="https://42x.typeform.com/to/Q9Ltrx" target="_blank">
+					<button class="button">Register now</button>
+				</a>
+			</div>
+		</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-sm-12 col-md-4" style="text-align: center">
+				<div class="event">
+					<p class="date">
+						<span>March 6th, 07:45</span>
+					</p>
+					<p class="location">
+						<span>Cinquantenaire</span>
+					</p>
+				</div>
+	    </div>
+	    <div class="col-sm-12 col-md-4">
+				<div class="event">
+					<p class="date">
+						<span>March 20th, 07:45</span>
+					</p>
+					<p class="location">
+						<span>Parc Royal</span>
+					</p>
+				</div>
+	    </div>
+	    <div class="col-sm-12 col-md-4">
+				<div class="event">
+					<p class="date">
+						<span>April 3rd, 07:45</span>
+					</p>
+					<p class="location">
+						<span>Bois de la Cambre</span>
+					</p>
+				</div>
+	    </div>
+		</div>
+	</div>
+	<footer>
+		<div>
+			<small style="">&copy; 2019 FullSpeed Dating, Brussels</small>
+		</div>
+	</footer>
+	<script>
+		var VueTyper = window.VueTyper.VueTyper
+		var vm =  new Vue({
+			el: '#app',
+			components: {
+		    'vue-typer': VueTyper
+		  }
+		});
+	</script>
+</body>
+</html>
